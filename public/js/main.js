@@ -6,7 +6,7 @@ var initialPrice = parseFloat(
   price.innerHTML.replace(/,/g, "").replace("VND", "")
 );
 var number = 1;
-var close = document.querySelector(".close");
+var close1 = document.querySelector(".close");
 var zoomCard = document.querySelector(".container_zoom_card");
 
 add.addEventListener("click", function () {
@@ -22,7 +22,7 @@ remove.addEventListener("click", function () {
     price.innerHTML = (initialPrice * number).toLocaleString("en-VN");
   }
 });
-close.addEventListener("click", function () {
+close1.addEventListener("click", function () {
   zoomCard.style.display = "none";
   number = 1;
   value.innerHTML = number;

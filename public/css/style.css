@@ -495,3 +495,15 @@ footer div:nth-child(3) > img {
   background-color: #f5eede;
   padding: 1rem;
 }
+.notification{
+  position: fixed;
+  padding: 0.5rem 1rem;
+  background-color: #e2a22a;
+  border-radius: 5px;
+  color: white;
+  bottom: 20px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 30;
+}

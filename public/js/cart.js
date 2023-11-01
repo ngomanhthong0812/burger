@@ -5,6 +5,7 @@ var my_menu = document.querySelector(".my_menu");
 var my_body = document.querySelector(".my_body");
 var my_banner = document.querySelector(".my_banner");
 var cartChild = document.querySelector(".cart .cart_child");
+var notification = document.querySelector(".notification");
 cart.addEventListener("click", function () {
   cartChild.classList.toggle("none");
 });
@@ -70,6 +71,18 @@ function addProductToCart(button) {
   // Thêm thẻ mới vào cart_child
   cartChild.appendChild(newCardProduct);
   saveCartToLocalStorage(cartChild.innerHTML);
+
+  // hiển thị thông báo
+  notification.style.opacity = "1";
+
+  setTimeout(function () {
+    notification.style.opacity = "0";
+  }, 1000);
+  // ẩn zoomcard
+  zoomCard.style.display = "none";
+  number = 1;
+  value.innerHTML = number;
+  price.innerHTML = initialPrice.toLocaleString("en-VN");
 }
 function saveCartToLocalStorage(cartItems) {
   // Lưu trạng thái giỏ hàng vào Local Storage
